@@ -11,6 +11,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
+import { BrowserRouter } from "react-router-dom";
 // import { getAnalytics } from "firebase/analytics";
 
 // const analytics = getAnalytics(app);
@@ -18,7 +19,9 @@ import {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
-  <App />
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
   // </React.StrictMode>
 );
 
