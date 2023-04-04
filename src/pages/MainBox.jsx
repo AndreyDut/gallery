@@ -1,15 +1,18 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { WrapMainBox } from "./mainBox.style";
+import MainPage from "./MainPage/MainPage";
 
 const MainBox = () => {
   return (
-    <div>
+    <WrapMainBox>
       <Routes>
-        <Route path={"/account"} element={<div></div>}>
+        <Route path={"/"} element={<MainPage/>}/>
+        <Route path={"/"} element={<div></div>}>
           <Route path={":content"} element={<div></div>} />
         </Route>
       </Routes>
-    </div>
+    </WrapMainBox>
   );
 };
 

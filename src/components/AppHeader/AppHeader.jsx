@@ -18,7 +18,7 @@ const AppHeader = () => {
 
   return (
     <WrapAppHeader burgerOpen={localState.burgerOpen}>
-      <button class="wrap-head-burger" onClick={handlerActions("toggleBurger")}>
+      <button className="wrap-head-burger" onClick={handlerActions("toggleBurger")}>
         <svg
           width="32px"
           height="32px"
@@ -112,12 +112,12 @@ const AppHeader = () => {
           </li>
           <li>
             <NavLink
-              to="/gallery"
+              to="/catalog"
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
             >
-              Галерея
+              Каталог
             </NavLink>
           </li>
           <li>
