@@ -14,6 +14,7 @@ import { db } from "./services/initFireBase";
 import AppHeader from "./components/AppHeader/AppHeader";
 import MainBox from "./pages/MainBox";
 import AppFooter from './components/AppFooter/AppFooter';
+import AppLoader from "./components/AppLoader/AppLoader";
 
 function App() {
 
@@ -72,6 +73,7 @@ function App() {
 
   return (
     <>
+    <AppLoader/>
     <AppHeader/>
     <MainBox/>
     <AppFooter/>

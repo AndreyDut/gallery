@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { WrapAppHeader } from "./appHeader.style";
 import { NavLink } from "react-router-dom";
+import BtnClose from "../BtnClose/BtnClose";
 
 const AppHeader = () => {
   const [localState, setLocalState] = useState({ burgerOpen: false });
@@ -56,39 +57,7 @@ const AppHeader = () => {
         </svg>
       </button>
       <div className="wrap-head-nav">
-        <button
-          className="burger__close"
-          onClick={handlerActions("toggleBurger")}
-        >
-          <svg
-            width="34px"
-            height="34px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              {" "}
-              <g id="Menu / Close_LG">
-                {" "}
-                <path
-                  id="Vector"
-                  d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001"
-                  stroke="#000000"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>{" "}
-              </g>{" "}
-            </g>
-          </svg>
-        </button>
+        <BtnClose onClose={handlerActions("toggleBurger")}/>
         <ul className="nav-list">
           <li>
             <NavLink

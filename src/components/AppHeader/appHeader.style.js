@@ -34,7 +34,7 @@ const WrapAppHeader = styled.div`
       display: block;
     }
   }
-  .burger__close {
+  .btn-close {
     display: none;
   }
 
@@ -72,7 +72,7 @@ const WrapAppHeader = styled.div`
       transition: left 0.5s;
       background-color: rgb(255, 255, 255);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-      .burger__close {
+      .btn-close {
         display: none;
         display: block;
         position: absolute;

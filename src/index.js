@@ -3,25 +3,19 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
-} from "firebase/auth";
 import { BrowserRouter } from "react-router-dom";
-// import { getAnalytics } from "firebase/analytics";
-
-// const analytics = getAnalytics(app);
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
   <BrowserRouter>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </BrowserRouter>
+
   // </React.StrictMode>
 );
 

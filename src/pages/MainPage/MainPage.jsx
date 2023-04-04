@@ -1,7 +1,7 @@
 import React from "react";
-import { WrapMainPage } from "./MainPage.style";
 import { Link } from "react-router-dom";
 import info_photo from "../../assets/info-photo.jpg";
+import { WrapMainPage } from "./mainPage.style";
 
 const MainPage = () => {
   return (
@@ -74,7 +74,7 @@ const MainPage = () => {
             </div>
           </div>
           <div className="wrap-photo">
-            <img src={info_photo} alt="photo" />
+            <img src={info_photo} alt="preview" />
           </div>
         </div>
       </div>
