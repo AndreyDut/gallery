@@ -4,6 +4,9 @@ import extraReducers from './appExtraReducers';
 
 export const initialStateApp = {
   albums: [],
+  photos: [],
+  favorites: [],
+  favoritesInCatalog: false,
   selectAlbum: null,
   loader: false,
 };

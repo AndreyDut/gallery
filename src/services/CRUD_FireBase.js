@@ -35,4 +35,4 @@ const readData = async (url) => {
 };
 
 
-export { readData };
+export { readData, updateData };
