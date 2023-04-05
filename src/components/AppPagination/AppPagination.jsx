@@ -13,24 +13,17 @@ const AppPagination = ({ itemsLength, itemsPerPage = 12, }) => {
 
 
   const onPageChange = (e) => {
+    let page = e.selected
+    let start = (page * itemsPerPage) % itemsLength;
+    const range = {
+      start,
+      end: start + itemsPerPage,
+    };
+    itemsLength && dispatch(setPagination(range))
     navigate(`?page=${++e.selected}`);
   };
 
-  useEffect(() => {
-    let page = search.get("page");
-    if(page) {
-      let start = ((page - 1) * itemsPerPage) % itemsLength;
-      const range = {
-        start,
-        end: start + itemsPerPage,
-      };
-      itemsLength && dispatch(setPagination(range))
-    }    
-    else {
-      navigate(`?page=1`);
-    }
-  }, [search, dispatch, itemsLength])
-
+  if(!itemsLength) return null;
 
   return (
     <WrapAppPagination>
@@ -38,6 +31,7 @@ const AppPagination = ({ itemsLength, itemsPerPage = 12, }) => {
         breakLabel="..."
         nextLabel="next >"
         onPageChange={onPageChange}
+        initialPage={(search.get("page") || 1) - 1}
         pageRangeDisplayed={5}
         pageCount={pageCount}
         previousLabel="< prev"
@@ -55,4 +49,4 @@ const AppPagination = ({ itemsLength, itemsPerPage = 12, }) => {
   );
 };
 
-export default AppPagination;
+export default React.memo(AppPagination);
