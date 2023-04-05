@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const WrapAppPagination = styled.div`
-  padding: 30px 0;
+  padding: 10px 0 20px;
   .pagination {
     display: flex;
     justify-content: center;
@@ -9,6 +9,7 @@ const WrapAppPagination = styled.div`
     list-style: none;
 
     .page-item {
+      display: flex;
       .page-link {
         padding: 6px 12px;
         border: 1px solid #dee2e6;
@@ -23,6 +24,10 @@ const WrapAppPagination = styled.div`
       &:first-child .page-link {
         border-top-left-radius: 0.25rem;
         border-bottom-left-radius: 0.25rem;
+      }
+      &:last-child .page-link {
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
       }
       &.disabled .page-link {
         color: #6c757d;
@@ -46,6 +51,20 @@ const WrapAppPagination = styled.div`
         }
       }
     }
+  }
+  .wrap-pagination-select {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 16px;
+    p {
+      line-height: 28px;
+      padding-right: 10px;
+    }
+  }
+  .pagination-select {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 6px 12px;
   }
 `;
 

@@ -17,7 +17,7 @@ export default function AppToast() {
     return () => {
       timeoutId.current = clearTimeout(timeoutId.current);
     };
-  }, [toast]);
+  }, [toast, dispatch]);
 
   if (!toast.trim()) return null;
 

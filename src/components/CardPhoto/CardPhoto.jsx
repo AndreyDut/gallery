@@ -41,7 +41,7 @@ const CardPhoto = ({ type, photo, favorite }) => {
             )
           ) : null}
           <div className="photo__preview">
-            <img src={photo.thumbnailUrl} alt="thumbnail photo" />
+            <img src={photo.thumbnailUrl} alt="thumbnail" />
           </div>
           <p className="photo__title">{photo.title}</p>
           {type === "favorites" ? (

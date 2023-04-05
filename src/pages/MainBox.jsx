@@ -15,7 +15,7 @@ const MainBox = () => {
 
   useEffect(() => {
     dispatch(getFavoritesPhotos());
-  }, []);
+  }, [dispatch]);
 
   return (
     <WrapMainBox>

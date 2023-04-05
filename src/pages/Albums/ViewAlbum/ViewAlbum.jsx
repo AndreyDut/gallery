@@ -20,7 +20,7 @@ const ViewAlbum = () => {
 
   useEffect(() => {
     dispatch(getAlbumById(albumId));
-  }, [albums, albumId]);
+  }, [albums, albumId, dispatch]);
 
   return (
     <WrapViewAlbum>

@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { WrapCatalog } from "./catalog.style";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllPhotos } from "../../store/slices/appSlice/appExtraReducers";
 import { AppGrid } from "../../assets/theme";
 import CardPhoto from "../../components/CardPhoto/CardPhoto";
-import ReactPaginate from "react-paginate";
 import AppPagination from "../../components/AppPagination/AppPagination";
 
 const Catalog = () => {
@@ -16,7 +15,8 @@ const Catalog = () => {
 
   useEffect(() => {
     dispatch(getAllPhotos());
-  }, []);
+  }, [dispatch]);
+
 
   return (
     <WrapCatalog>

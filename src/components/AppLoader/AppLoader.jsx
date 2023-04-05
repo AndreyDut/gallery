@@ -19,7 +19,7 @@ const AppLoader = () => {
     return () => {
       timeoutId.current = clearTimeout(timeoutId.current);
     };
-  }, [loader]);
+  }, [loader, dispatch]);
 
   if (!loader) return null;
 

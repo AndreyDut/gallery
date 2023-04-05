@@ -10,7 +10,7 @@ export const initialStateApp = {
   selectAlbum: null,
   loader: false,
   toast: "",
-  pagination: {start: 0, end: 12},
+  pagination: {start: 0, end: 15, page: +new URLSearchParams(document.location.search).get("page") || 1},
 };
 
 const appSlice = createSlice({
