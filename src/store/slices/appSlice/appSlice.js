@@ -10,7 +10,7 @@ export const initialStateApp = {
   selectAlbum: null,
   loader: false,
   toast: "",
-
+  pagination: {start: 0, end: 12},
 };
 
 const appSlice = createSlice({
@@ -22,6 +22,6 @@ const appSlice = createSlice({
 
 const appReducer = appSlice.reducer;
 
-export const {setAppState, resetAppState} = appSlice.actions;
+export const {setAppState, resetAppState, setPagination} = appSlice.actions;
 
 export default appReducer;

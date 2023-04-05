@@ -6,6 +6,10 @@ const reducers = {
         return {...state, ...payload}
     },
 
+    setPagination(state, {payload}) {
+        state.pagination = {...state.pagination, ...payload}
+    },
+
     resetAppState(state, {payload}) {
         switch (payload) {
             case "selectAlbum":
