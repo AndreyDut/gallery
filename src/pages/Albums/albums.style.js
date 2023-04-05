@@ -9,12 +9,6 @@ const WrapAlbums = styled.div`
     padding: 20px 0 16px;
   }
   .albums-grid {
-    max-width: 940px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    justify-content: center;
-    padding: 24px 40px 0 16px;
     .wrap-album {
       padding: 0 0 24px 24px;
       .album {

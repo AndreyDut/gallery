@@ -7,6 +7,7 @@ import ViewAlbum from "./Albums/ViewAlbum/ViewAlbum";
 import Catalog from "./Catalog/Catalog";
 import { getFavoritesPhotos } from "../store/slices/appSlice/appExtraReducers";
 import { useDispatch } from "react-redux";
+import Favorites from './Favorites/Favorites';
 
 const MainBox = () => {
 
@@ -24,9 +25,7 @@ const MainBox = () => {
           <Route path={":albumId"} element={<ViewAlbum />} />
         </Route>
         <Route path={"/catalog"} element={<Catalog />} />
-        <Route path={"/"} element={<div></div>}>
-          <Route path={":content"} element={<div></div>} />
-        </Route>
+        <Route path={"/favorites"} element={<Favorites />} />
       </Routes>
     </WrapMainBox>
   );

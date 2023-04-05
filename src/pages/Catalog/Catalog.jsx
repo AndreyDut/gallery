@@ -6,6 +6,7 @@ import { updateData } from "../../services/CRUD_FireBase";
 import { arrayRemove, arrayUnion } from "firebase/firestore";
 import { addFavoritePhoto, getAllPhotos, removeFavoritePhoto } from "../../store/slices/appSlice/appExtraReducers";
 import { favoritesBGIcon, favoritesIcon } from "../../assets/svg_icons";
+import { AppGrid } from "../../assets/theme";
 
 const Catalog = () => {
   const photos = useSelector((state) => state.app.photos);
@@ -31,15 +32,15 @@ const Catalog = () => {
     }
   };
 
-  console.log(favorites);
-  console.log(photos);
+  // console.log(favorites);
+  // console.log(photos);
 
   return (
     <WrapCatalog>
       <h2>Каталог работ</h2>
       <p>В каталоге представлены работы художников</p>
 
-      <div className="photos-grid">
+      <AppGrid className="photos-grid">
         {photos.map((photo) => (
           <div className="wrap-photo" key={photo.id} onClick={() => {}}>
             <div className="photo">
@@ -65,7 +66,7 @@ const Catalog = () => {
             </div>
           </div>
         ))}
-      </div>
+      </AppGrid>
     </WrapCatalog>
   );
 };

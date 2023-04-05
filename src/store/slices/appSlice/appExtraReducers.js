@@ -35,7 +35,7 @@ export const removeFavoritePhoto = createAsyncThunk(
   async (photo, thunkAPI) => {
     await updateData("photos/favorites", { data: arrayRemove(photo) });
     let favorites = thunkAPI.getState().app.favorites.slice();
-    favorites = favorites.filter(elem => elem.id !== photo.id);
+    favorites = favorites.filter((elem) => elem.id !== photo.id);
     return favorites;
   }
 );
@@ -88,17 +88,19 @@ const extraReducers = (builder) => {
   });
   builder.addCase(addFavoritePhoto.fulfilled, (state, { payload }) => {
     state.favorites = payload;
+    state.toast = "Добавлено в избранное";
     state.loader = false;
   });
   builder.addCase(addFavoritePhoto.rejected, (state, action) => {
     state.loader = false;
   });
 
-  builder.addCase(removeFavoritePhoto.pending, (state, { payload }) => {
+  builder.addCase(removeFavoritePhoto.pending, (state) => {
     state.loader = true;
   });
   builder.addCase(removeFavoritePhoto.fulfilled, (state, { payload }) => {
     state.favorites = payload;
+    state.toast = "Удалено из избранного";
     state.loader = false;
   });
   builder.addCase(removeFavoritePhoto.rejected, (state, { payload }) => {

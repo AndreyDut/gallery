@@ -11,6 +11,9 @@ const reducers = {
             case "selectAlbum":
                 state.selectAlbum = null;
                 break;      
+            case "toast":
+                state.toast = initialStateApp.toast;
+                break;      
             default:
                 return initialStateApp;
         }

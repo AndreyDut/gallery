@@ -9,6 +9,8 @@ export const initialStateApp = {
   favoritesInCatalog: false,
   selectAlbum: null,
   loader: false,
+  toast: "",
+
 };
 
 const appSlice = createSlice({

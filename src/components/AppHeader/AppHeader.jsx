@@ -6,34 +6,26 @@ import { burgerIcon } from "../../assets/svg_icons";
 import { useSelector } from "react-redux";
 
 const AppHeader = () => {
-  const [localState, setLocalState] = useState({ burgerOpen: false });
+  const [burgerOpen, setBurgerOpen] = useState(false);
   const favoritesLength = useSelector((state) => state.app.favorites.length);
 
-  const handlerActions = (key) => () => {
-    switch (key) {
-      case "toggleBurger":
-        setLocalState((state) => ({ ...state, burgerOpen: !state.burgerOpen }));
-        break;
-
-      default:
-        break;
-    }
-  };
+  const toggleBurger = () => setBurgerOpen((state) => !state);
 
   return (
-    <WrapAppHeader burgerOpen={localState.burgerOpen}>
+    <WrapAppHeader burgerOpen={burgerOpen}>
       <button
         className="wrap-head-burger"
-        onClick={handlerActions("toggleBurger")}
+        onClick={toggleBurger}
       >
         {burgerIcon}
       </button>
       <div className="wrap-head-nav">
-        <BtnClose onClose={handlerActions("toggleBurger")} />
+        <BtnClose onClose={toggleBurger} />
         <ul className="nav-list">
           <li>
             <NavLink
               to="/"
+              onClick={toggleBurger}
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
@@ -44,6 +36,7 @@ const AppHeader = () => {
           <li>
             <NavLink
               to="/albums"
+              onClick={toggleBurger}
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
@@ -54,6 +47,7 @@ const AppHeader = () => {
           <li>
             <NavLink
               to="/catalog"
+              onClick={toggleBurger}
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
@@ -64,6 +58,7 @@ const AppHeader = () => {
           <li>
             <NavLink
               to="/favorites"
+              onClick={toggleBurger}
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
