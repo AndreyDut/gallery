@@ -47,7 +47,12 @@ const WrapCatalog = styled.div`
         }
         .photo__title {
           font-weight: 500;
-          height: 75px;
+          height: 30px;
+          line-height: 25px;
+          padding: 0 6px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
       }
     }
