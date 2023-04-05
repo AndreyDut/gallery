@@ -68,7 +68,7 @@ const WrapAppHeader = styled.div`
             background: rgb(185, 145, 133);
             color: rgb(255, 255, 255);
             border-radius: 50%;
-            width: 18px;
+            min-width: 18px;
             height: 18px;
             text-align: center;
             font-size: 13px;
