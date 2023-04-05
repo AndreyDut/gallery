@@ -50,6 +50,7 @@ const WrapAppHeader = styled.div`
         display: inline-block;
         white-space: nowrap;
         a {
+          position: relative;
           margin: 0 13px;
           text-decoration: none;
           color: #333;
@@ -59,6 +60,18 @@ const WrapAppHeader = styled.div`
           }
           &.active {
             color: rgb(185, 145, 133);
+          }
+          .badge {
+            position: absolute;
+            top: -3px;
+            right: -18px;
+            background: rgb(185, 145, 133);
+            color: rgb(255, 255, 255);
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            font-size: 13px;
           }
         }
       }
