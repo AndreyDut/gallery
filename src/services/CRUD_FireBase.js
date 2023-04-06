@@ -4,8 +4,6 @@ import {
   deleteDoc,
   getDoc,
   doc,
-  getDocs,
-  collection,
 } from "firebase/firestore";
 import { db } from "./initFireBase";
 
@@ -35,4 +33,4 @@ const readData = async (url) => {
 };
 
 
-export { readData, updateData };
+export { readData, updateData, setData, createData, deleteData };

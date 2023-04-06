@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const AppGrid = styled.div`
-    max-width: 940px;
+    max-width: 1020px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;

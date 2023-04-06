@@ -1,6 +1,6 @@
-import {createSlice} from '@reduxjs/toolkit';
-import reducers from './appReducers';
-import extraReducers from './appExtraReducers';
+import { createSlice } from "@reduxjs/toolkit";
+import reducers from "./appReducers";
+import extraReducers from "./appExtraReducers";
 
 export const initialStateApp = {
   albums: [],
@@ -10,18 +10,22 @@ export const initialStateApp = {
   selectAlbum: null,
   loader: false,
   toast: "",
-  pagination: {start: 0, end: 15, page: +new URLSearchParams(document.location.search).get("page") || 1},
+  pagination: {
+    start: 0,
+    end: 15,
+    page: +new URLSearchParams(document.location.search).get("page") || 1,
+  },
 };
 
 const appSlice = createSlice({
-  name: 'app',
+  name: "app",
   initialState: initialStateApp,
   reducers,
   extraReducers,
-})
+});
 
 const appReducer = appSlice.reducer;
 
-export const {setAppState, resetAppState, setPagination} = appSlice.actions;
+export const { setAppState, resetAppState, setPagination } = appSlice.actions;
 
 export default appReducer;
