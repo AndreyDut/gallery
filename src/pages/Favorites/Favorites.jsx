@@ -11,11 +11,11 @@ const Favorites = () => {
     <WrapFavorites>
       <h2>Избранные картины</h2>
       <p>Список ваших избранных картин</p>
-      <AppGrid className="photos-grid">
+      {favorites.length ? <AppGrid className="photos-grid">
         {favorites.map((photo) => (
           <CardPhoto type="favorites" photo={photo} key={photo.id} />
         ))}
-      </AppGrid>
+      </AppGrid> : <p>У вас нет избранных картин</p> }
     </WrapFavorites>
   );
 };

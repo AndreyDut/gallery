@@ -22,7 +22,7 @@ const Catalog = () => {
     <WrapCatalog>
       <h2>Каталог работ</h2>
       <p>В каталоге представлены работы художников</p>
-      <AppGrid className="photos-grid">
+      {currentItems.length ? <AppGrid className="photos-grid">
         {currentItems.map((photo) => (
           <CardPhoto
             type="catalog"
@@ -31,7 +31,7 @@ const Catalog = () => {
             favorite={favorites.find((elem) => elem.id === photo.id)}
           />
         ))}
-      </AppGrid>
+      </AppGrid> : <p>Каталог загружается</p>}
       {photos.length > 20 ?<AppPagination itemsLength={photos.length} /> : null}
     </WrapCatalog>
   );
