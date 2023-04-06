@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { WrapCardPhoto } from "./cardPhoto.style";
 import { favoritesBGIcon, favoritesIcon } from "../../assets/svg_icons";
 import { useDispatch } from "react-redux";
@@ -7,21 +7,33 @@ import { addFavoritePhoto, removeFavoritePhoto } from "../../store/slices/appSli
 const CardPhoto = ({ type, photo, favorite }) => {
   const dispatch = useDispatch();
 
-  const handlerActions = (key, data) => async () => {
+
+
+  const handlerActions = (key, photo) => async () => {
     switch (key) {
       case "addFavorites":
-        dispatch(addFavoritePhoto(data));
+        dispatch(addFavoritePhoto(photo));
         break;
       case "removeFavorites":
-        dispatch(removeFavoritePhoto(data));
+        // setAnimateRemove(true)
+        dispatch(removeFavoritePhoto({photo, animation: type === "favorites" && !photo.remove}));
         break;
 
       default:
         break;
     }
   };
+
+  useEffect(() => {
+    if(photo.remove) {
+      setTimeout(() => {
+        dispatch(removeFavoritePhoto({photo, animation: type === "favorites" && !photo.remove}));
+      }, 700);
+    }
+  }, [photo, dispatch, type])
+
   return (
-    <WrapCardPhoto className="wrap-photo" onClick={handlerActions("selectPhoto", photo)}>
+    <WrapCardPhoto className="wrap-photo" onClick={handlerActions("selectPhoto", photo)} animateRemove={photo.remove}>
         <div className="photo">
           {type === "catalog" ? (
              favorite ? (

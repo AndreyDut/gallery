@@ -32,7 +32,7 @@ const Catalog = () => {
           />
         ))}
       </AppGrid>
-      <AppPagination itemsLength={photos.length} />
+      {photos.length > 20 ?<AppPagination itemsLength={photos.length} /> : null}
     </WrapCatalog>
   );
 };

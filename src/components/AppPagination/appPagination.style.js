@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const WrapAppPagination = styled.div`
   padding: 10px 0 20px;
+  margin-top: auto;
   .pagination {
     display: flex;
     justify-content: center;
@@ -13,6 +14,10 @@ const WrapAppPagination = styled.div`
       .page-link {
         padding: 6px 12px;
         border: 1px solid #dee2e6;
+        @media (max-width: 480px) {
+          padding: 3px 6px;
+      
+        }
         &:hover {
           z-index: 2;
           color: rgb(185, 145, 133);

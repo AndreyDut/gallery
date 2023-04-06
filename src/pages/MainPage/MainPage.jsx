@@ -23,7 +23,7 @@ const MainPage = () => {
             <p>Картины маслом в короткие сроки!</p>
           </div>
 
-          <Link to={"/catalog"} className="link__catalog">
+          <Link to={"/catalog?page=1&count=20"} className="link__catalog">
             Перейти в каталог
           </Link>
         </div>

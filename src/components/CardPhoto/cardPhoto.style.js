@@ -1,7 +1,32 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+const rotate = keyframes`
+0% {
+  transform: scale(1);
+  opacity: 1;
+}
+50% {
+  transform: scale(0);
+  opacity: 0;
+}
+100% {
+  width: 0;
+  min-width: 0;
+  transform: scale(0);
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}
+`;
 
 const WrapCardPhoto = styled.div`
   padding: 0 0 24px 24px;
+  overflow: hidden;
+  ${(props) =>
+    props.animateRemove &&
+    css`
+      animation: ${rotate} forwards 0.7s ease-out 1;
+    `}
   .photo {
     position: relative;
     width: 205px;

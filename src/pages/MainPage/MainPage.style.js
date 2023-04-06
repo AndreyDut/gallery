@@ -30,7 +30,7 @@ const WrapMainPage = styled.div`
       }
       .link__catalog {
         display: inline-block;
-        width: 310px;
+        width: 280px;
         height: 50px;
         line-height: 47px;
         font-size: 20px;
@@ -61,6 +61,9 @@ const WrapMainPage = styled.div`
     .info-content {
       display: flex;
       max-height: 500px;
+      @media (max-width: 480px) {
+        max-height: 100%;
+      }
       .content-items {
         .item {
           display: flex;

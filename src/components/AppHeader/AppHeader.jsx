@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { WrapAppHeader } from "./appHeader.style";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import BtnClose from "../BtnClose/BtnClose";
 import { burgerIcon } from "../../assets/svg_icons";
 import { useSelector } from "react-redux";
@@ -8,8 +8,13 @@ import { useSelector } from "react-redux";
 const AppHeader = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const favoritesLength = useSelector((state) => state.app.favorites.length);
+  const location = useLocation();
 
   const toggleBurger = () => setBurgerOpen((state) => !state);
+
+  useEffect(() => {
+    setBurgerOpen(false)
+  }, [location])
 
   return (
     <WrapAppHeader burgerOpen={burgerOpen}>
@@ -25,7 +30,6 @@ const AppHeader = () => {
           <li>
             <NavLink
               to="/"
-              onClick={toggleBurger}
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
@@ -36,7 +40,6 @@ const AppHeader = () => {
           <li>
             <NavLink
               to="/albums"
-              onClick={toggleBurger}
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
@@ -46,8 +49,7 @@ const AppHeader = () => {
           </li>
           <li>
             <NavLink
-              to="/catalog"
-              onClick={toggleBurger}
+              to="/catalog?page=1&count=20"
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
@@ -58,7 +60,6 @@ const AppHeader = () => {
           <li>
             <NavLink
               to="/favorites"
-              onClick={toggleBurger}
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
