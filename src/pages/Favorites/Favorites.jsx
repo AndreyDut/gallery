@@ -10,6 +10,7 @@ const Favorites = () => {
   const favorites = useSelector((state) => state.app.favorites);
   const { start, end } = useSelector((state) => state.app.pagination);
   const currentItems = favorites.slice(start, end);
+
   return (
     <WrapFavorites>
       <h2>Избранные картины</h2>

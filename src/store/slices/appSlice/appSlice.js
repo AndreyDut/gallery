@@ -12,7 +12,7 @@ export const initialStateApp = {
   toast: "",
   pagination: {
     start: 0,
-    end: 15,
+    end: 20,
     page: +new URLSearchParams(document.location.search).get("page") || 1,
   },
 };

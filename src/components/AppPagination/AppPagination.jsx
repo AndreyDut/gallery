@@ -54,7 +54,7 @@ const AppPagination = ({ itemsLength, itemsPerPage = 20 }) => {
   }, [navigate, page, count, search, pageCount]);
 
   useEffect(() => {
-    onPageChange((+search.get("page") || 1) - 1, +search.get("count"));
+    +search.get("count") && onPageChange((+search.get("page") || 1) - 1, +search.get("count"));
   }, [location, onPageChange, search]);
 
   if (!itemsLength) return null;
