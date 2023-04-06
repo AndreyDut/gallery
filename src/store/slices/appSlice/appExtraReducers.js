@@ -74,14 +74,14 @@ const extraReducers = (builder) => {
     state.loader = false;
   });
   builder.addCase(getFavoritesPhotos.pending, (state, { payload }) => {
-    state.loader = true;
+
   });
   builder.addCase(getFavoritesPhotos.fulfilled, (state, { payload }) => {
     state.favorites = payload;
-    state.loader = false;
+
   });
   builder.addCase(getFavoritesPhotos.rejected, (state, { payload }) => {
-    state.loader = false;
+
   });
   builder.addCase(getAlbumById.fulfilled, (state, { payload }) => {
     state.selectAlbum = payload;
