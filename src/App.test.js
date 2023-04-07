@@ -4,7 +4,7 @@ import { store } from './store/store';
 import { Provider } from "react-redux";
 import { MemoryRouter } from "react-router-dom";
 
-describe("renders learn react link", () => {
+test("renders главная", () => {
   render(
     <MemoryRouter>
     <Provider store={store}>
@@ -13,5 +13,6 @@ describe("renders learn react link", () => {
     </MemoryRouter>
   );
   const linkElement = screen.getByText(/главная/i);
+
   expect(linkElement).toBeInTheDocument();
 });
