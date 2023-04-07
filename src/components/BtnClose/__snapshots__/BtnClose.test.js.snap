@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`работа BtnClose 1`] = `
+<button
+  className="btn-close"
+  onClick={[Function]}
+  style={
+    Object {
+      "background": "transparent",
+      "border": "none",
+      "cursor": "pointer",
+      "outline": "none",
+    }
+  }
+>
+  <svg
+    fill="none"
+    height="34px"
+    viewBox="0 0 24 24"
+    width="34px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      id="SVGRepo_bgCarrier"
+      strokeWidth="0"
+    />
+    <g
+      id="SVGRepo_tracerCarrier"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <g
+      id="SVGRepo_iconCarrier"
+    >
+       
+      <g
+        id="Menu / Close_LG"
+      >
+         
+        <path
+          d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001"
+          id="Vector"
+          stroke="#000000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+        />
+         
+      </g>
+       
+    </g>
+  </svg>
+</button>
+`;
+
+exports[`работа BtnClose 2`] = `
+<button
+  className="btn-close"
+  onClick={[Function]}
+  style={
+    Object {
+      "background": "transparent",
+      "border": "none",
+      "cursor": "pointer",
+      "outline": "none",
+    }
+  }
+>
+  <svg
+    fill="none"
+    height="34px"
+    viewBox="0 0 24 24"
+    width="34px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      id="SVGRepo_bgCarrier"
+      strokeWidth="0"
+    />
+    <g
+      id="SVGRepo_tracerCarrier"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <g
+      id="SVGRepo_iconCarrier"
+    >
+       
+      <g
+        id="Menu / Close_LG"
+      >
+         
+        <path
+          d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001"
+          id="Vector"
+          stroke="#000000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+        />
+         
+      </g>
+       
+    </g>
+  </svg>
+</button>
+`;
+
+exports[`работа BtnClose 3`] = `
+<button
+  className="btn-close"
+  onClick={[Function]}
+  style={
+    Object {
+      "background": "transparent",
+      "border": "none",
+      "cursor": "pointer",
+      "outline": "none",
+    }
+  }
+>
+  <svg
+    fill="none"
+    height="34px"
+    viewBox="0 0 24 24"
+    width="34px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      id="SVGRepo_bgCarrier"
+      strokeWidth="0"
+    />
+    <g
+      id="SVGRepo_tracerCarrier"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <g
+      id="SVGRepo_iconCarrier"
+    >
+       
+      <g
+        id="Menu / Close_LG"
+      >
+         
+        <path
+          d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001"
+          id="Vector"
+          stroke="#000000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+        />
+         
+      </g>
+       
+    </g>
+  </svg>
+</button>
+`;
